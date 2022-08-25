@@ -1,0 +1,33 @@
+<?xml version="1.0" encoding="utf-8"?>
+<odoo>
+
+    <record id="tree_property_tags_view" model="ir.ui.view">
+        <field name="name">re.properties.tags.tree</field>
+        <field name="model">estate.property.tags</field>
+        <field name="arch" type="xml">
+            <tree string="Property Tags" editable="bottom">
+                <field name="name"/>
+            </tree>
+        </field>
+    </record>
+
+
+    <record id="action_estate_tags" model="ir.actions.act_window">
+        <field name="name">Property Tags</field>
+        <field name="type">ir.actions.act_window</field>
+        <field name="res_model">estate.property.tags</field>
+        <field name="view_mode">tree,form</field>
+        <field name="help" type="html">
+          <p class="o_view_nocontent_smiling_face">
+            Create a new Property Tag
+          </p>
+        </field>
+    </record>
+
+
+    <menuitem id="menu_tags"
+              name="Property Tags"
+              action="action_estate_tags"
+              parent="menu_settings_master"/>
+
+</odoo>

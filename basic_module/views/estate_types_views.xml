@@ -1,0 +1,54 @@
+<?xml version="1.0" encoding="utf-8"?>
+<odoo>
+
+    <record id="form_property_types_view" model="ir.ui.view">
+        <field name="name">re.properties.types.form</field>
+        <field name="model">estate.property.type</field>
+        <field name="arch" type="xml">
+            <form>
+                <sheet>
+                    <div class="oe_title">
+                            <h1><field nolabel="1" name="name"/></h1>
+                    </div>
+                    <field name="property_ids">
+                        <tree string="Property Types">
+                            <field name="name" string="Title"/>
+                            <field name="expected_price"/>
+                            <field name="state"/>
+                        </tree>
+                    </field>
+                </sheet>
+            </form>
+        </field>
+    </record>
+
+    <record id="tree_property_types_view" model="ir.ui.view">
+        <field name="name">re.properties.types.tree</field>
+        <field name="model">estate.property.type</field>
+        <field name="arch" type="xml">
+            <tree string="Property Types" editable="bottom">
+                <field name="sequence" widget="handle"/>
+                <field name="name"/>
+            </tree>
+        </field>
+    </record>
+
+
+    <record id="action_estate_types" model="ir.actions.act_window">
+        <field name="name">Property Types</field>
+        <field name="type">ir.actions.act_window</field>
+        <field name="res_model">estate.property.type</field>
+        <field name="view_mode">tree,form</field>
+        <field name="help" type="html">
+          <p class="o_view_nocontent_smiling_face">
+            Create a new Property Type
+          </p>
+        </field>
+    </record>
+
+
+    <menuitem id="menu_types"
+              name="Property Types"
+              action="action_estate_types"
+              parent="menu_settings_master"/>
+</odoo>

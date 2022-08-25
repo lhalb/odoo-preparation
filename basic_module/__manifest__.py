@@ -7,8 +7,12 @@
     ],
     'data': [
         'security/ir.model.access.csv',
+        'views/estate_menu.xml',
         'views/estate_property_views.xml',
-        'views/estate_menu.xml'
+        'views/estate_types_views.xml',
+        'views/estate_tags_views.xml',
+        'views/estate_offers_views.xml',
+        'views/all_icons.xml',
          ],
     'installable': True,
     'application': True,

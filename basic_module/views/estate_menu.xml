@@ -1,7 +1,14 @@
+<?xml version="1.0" encoding="utf-8"?>
 <odoo>
-<menuitem id="test_menu_root" name="Real Estate">
-    <menuitem id="test_first_level_menu" name="Advertisements">
-        <menuitem id="test_model_menu_action" name="Properties" action="test_model_action"/>
-    </menuitem>
-</menuitem>
+
+    <menuitem id="menu_estate_root"
+              name="Real Estate"
+              sequence="1"/>
+    <menuitem id="menu_properties_master"
+              name="Advertisements"
+              parent="menu_estate_root"/>
+    <menuitem id="menu_settings_master"
+              name="Settings"
+              parent="menu_estate_root"/>
+
 </odoo>
